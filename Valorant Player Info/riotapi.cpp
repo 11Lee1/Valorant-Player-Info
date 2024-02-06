@@ -1,4 +1,5 @@
 #define WIN32_LEAN_AND_MEAN
+#define NOMINMAX
 #include <Windows.h>
 #include <winhttp.h>
 #include <cassert>
@@ -18,15 +19,8 @@
 #include "rapidjson/reader.h"
 #include "riotapi.h"
 
-#pragma comment(lib, "IPHLPAPI.lib")
-#pragma comment(lib, "ws2_32.lib")
-
 #ifdef GetObject
 #undef GetObject
-#endif
-
-#ifdef max
-#undef max
 #endif
 
 _VALORANT_API_NAMESPACE_BEGIN
